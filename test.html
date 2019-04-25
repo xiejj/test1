@@ -1,0 +1,83 @@
+<html>
+<meta http-equiv=Content-Type content="text/html;charset=utf-8" />
+
+<link rel="stylesheet" href="css/select2.css" type="text/css" />
+<link rel="stylesheet" href="css/select2.min.css" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="js/select2.min.js"></script>
+<script type="text/javascript" src="js/select2.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		var str = "您好{cmch}，当前您所在的{czs}船闸所上游水位为{sysw}，下游水位为{xysw}！";
+		
+		alert(str.replace(/{cmch}/,'船名船号'));
+		
+	}); 
+	
+	
+	function doInit() {
+		$("#ckec").attr("checked",false);
+	
+		
+	}
+	
+	function doInit1() {
+		var path = "http://172.16.5.156:9704/analytics/saw.dll?portalpages&PortalPath=/users/weblogic/_portal&Page=page 1&NQUSER=weblogic&NQPASSWORD=Orcl123456";
+		
+		$("#myiframe").attr("src", path);
+	}
+
+	function toggleDdlx(lx) {
+			if (lx == '1') {
+				$("#ddzt_ytf").attr("disabled","disabled");
+			} else {
+				$("#ddzt_ytf").attr("disabled",false);
+			}
+	}
+
+	function toggleDdzt(zt) {
+		alert("123");
+	}
+
+</script >
+
+<body>
+	<div>
+		<input type="search" id = "test"></input>
+		
+		<input type="button" onclick="doInit();" value="测试" />
+		<input type="button" onclick="doInit1();" value="测试1" />
+		
+		<input type="checkbox" id="ckec" />
+		
+		<iframe id = "myiframe" ></iframe>
+		<iframe id = "myiframe1" ></iframe>
+		
+	
+		
+		
+		<select id = "sjgnId">
+			<option value="">请选择</option>
+			<option value="">1</option>
+			<option value="" selected >2</option>
+			<option value="">3</option>
+		</select>
+		
+		<p class="select_style"><strong>订单类型：</strong>
+					<a name="ddlx" href="#" class="click_on" onclick="toggleDdlx('')"><font>全部</font></a>
+					<a name="ddlx" href="#" onclick="toggleDdlx('1')"><font>闸费缴纳</font></a>
+					<a name="ddlx" href="#" onclick="toggleDdlx('3')"><font>闸费退费</font></a>
+				</p>
+				<p class="select_style"><strong>订单状态：</strong>
+					<a name="ddzt" href="#" class="click_on" onclick="toggleDdzt('')"><font>全部</font></a>
+					<a name="ddzt" href="#" onclick="toggleDdzt('1')"><font>未支付</font></a>
+					<a name="ddzt" href="#" onclick="toggleDdzt('2')"><font>已支付</font></a>
+					<a name="ddzt" id = "ddzt_ytf" href="#" onclick="toggleDdlx('3')"><font>已退费</font></a>
+				</p>
+
+	</div>
+
+</body>
+</html>
