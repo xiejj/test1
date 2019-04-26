@@ -1,0 +1,100 @@
+@CHARSET "UTF-8";
+/*角色管理权限-标题*/
+.tableM_title{
+	line-height:32px;
+	color:#525252;
+	text-indent:7px;
+	font-size:12px;
+	margin-bottom:10px;
+}
+/*角色管理权限-列表*/
+.tableM_list{
+	width:100%;
+	font-size:12px;
+	margin-bottom:30px;
+}
+.tableM_list thead th,
+.tableM_list thead td{
+	height:34px;
+	line-height:34px;
+	border-top:1px solid #bfbfbf;
+	border-bottom:1px solid #bfbfbf;
+	background:#f8f8f8;
+}
+.tableM_list thead td{
+	width:250px;
+}
+.tableM_list tbody td,
+.tableM_list tbody th{
+	height:30px;
+	line-height:30px;
+	border-bottom:1px solid #ccc;
+}
+.tableM_list tbody td{
+	text-indent:14px;
+}
+.tableM_list tbody th{
+	font-weight:normal;
+	text-align:center;
+}
+.tableM_list .img_btn{
+	line-height:30px;
+	_line-height:21px;
+	_padding-top:9px;
+	vertical-align:middle;
+	float:right;
+	display:none;
+	position:relative;
+}
+.tableM_list .img_btn img{
+	margin-right:10px;
+	cursor:pointer;
+}
+.tableM_list .jssm{
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+}
+/*鼠标经过-样式*/
+.tableM_list .num_on{
+	background:#fffcf4;
+}
+.tableM_list .num_on .img_btn{
+	display:inline;
+}
+/*鼠标点击-样式*/
+.tableM_list .num_click{
+	background:#ffffcc;
+}
+.tableM_list .num_click .img_btn{
+	background:#ffffcc;
+	padding-right:2px;
+	margin-right:-2px;
+	z-index:447;
+}
+
+/*权限设置树*/
+.tableM_treeDiv{
+	width:248px;
+	background:#fffcf4;
+	border:1px solid #ccc;
+	position:absolute;
+	top:222px;
+	right:50%;
+	margin-right:-495px;
+}
+.tableM_treeDiv h6{
+	width:238px;
+	line-height:37px;
+	color:#525252;
+	text-indent:6px;
+	font-size:12px;
+	font-weight:bold;
+	padding-top:4px;
+	margin:0px 5px;
+	border-bottom:1px solid #ccc;
+}
+.tableM_treeDiv .submit_div{
+	width:100%;
+	padding:10px 0px;
+}

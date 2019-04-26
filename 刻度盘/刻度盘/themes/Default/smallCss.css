@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+.kdparent{
+	   position:absolute; 
+ }
+ .kdp_0, .kdp_3, .kdp_6, .kdp_9{
+	 position:absolute;
+	 color:#999;
+	 font-family:Arial,Verdana;
+	 font-size:12px;
+ }
+ .kdp_0{
+	top:10px;
+	left:48px;
+}
+
+.kdp_3{
+	top:45px;
+	left:85px;
+}
+
+.kdp_6{
+	top:80px;
+	left:45px;
+}
+
+.kdp_9{
+	top:45px;
+	left:10px;
+}

@@ -1,0 +1,45 @@
+div.tooltip {
+	position: absolute;
+	z-index: 9999;
+}
+.tip_input{
+	background:#ffcccc;
+	}
+.tip{
+	position:absolute;
+	border-right:#e5e5e5 1px solid;
+	border-bottom:#e5e5e5 1px solid;
+	z-index:99999;
+	background:#ffffe1;
+	
+	}
+.tip_content{
+	line-height:17px;
+	border:#c6c5a8 1px solid;
+	background:#ffffe1;
+	color:#666666;
+	padding:3px 7px;
+	position:relative;
+	width:198px;
+	_margin-left:-15px;
+	}
+.tip_top{
+	background:url(validator/image/form_validator_tooltipbox02.gif) -26px -5px no-repeat;
+	width:11px;
+	height:7px;
+	display:block;
+	position:absolute;
+	left:15px;
+	bottom:-7px;
+	*bottom:-7px;
+	_bottom:-13px;
+	}
+.tip_top_up{
+	background:url(validator/image/form_validator_tooltipbox02.gif) -10px -5px no-repeat;
+	width:11px;
+	height:7px;
+	display:block;
+	position:absolute;
+	left:15px;
+	top:-7px;
+	}

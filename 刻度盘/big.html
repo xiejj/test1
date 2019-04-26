@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery-1.7.1.js" ></script> 
+<script type="text/javascript" src="js/metronic.js"></script>
+<script type="text/javascript" src="js/components-knob-dials.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.knob.js"></script>
+<link  type="text/css" rel="stylesheet" href="themes/Default/bigCss.css"/>
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<script src="js/excanvas.min.js"></script> 
+<script type="text/javascript">
+   $(document).ready(function(){
+      $(".knob")[0].style.cssText="color:#87ceeb;font-size:50px;font-family:Arial;font-weight:bold;"
+   });
+</script>
+<![endif]-->
+
+ <script type="text/javascript">	
+    $(document).ready(function(){
+		 //第一个参数是最小时间，第二个参数是每次跳动的刻度
+		 ComponentsKnobDials.init(0,1);	    
+	});	
+ </script>
+
+
+<style>
+ 
+
+</style>
+
+</head>
+<body>
+
+<div class="kdparent">
+<input class="knob"  data-cursor=true data-angleoffset=0 data-width="200" data-max=24 value="15">
+<span class="kdp_0">24</span>
+<span class="kdp_3">6</span>
+<span class="kdp_6">12</span>
+<span class="kdp_9">18</span>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+

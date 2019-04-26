@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+.kdparent{
+	   position:absolute; 
+ }
+ .kdp_0, .kdp_3, .kdp_6, .kdp_9{
+	 position:absolute;
+	 color:#999;
+	 font-family:Arial,Verdana;
+	 font-size:10px;
+ }
+ .kdp_0{
+	top:10px;
+	left:48px;
+}
+
+.kdp_3{
+	top:45px;
+	left:85px;
+}
+
+.kdp_6{
+	top:83px;
+	left:45px;
+}
+
+.kdp_9{
+	top:45px;
+	left:10px;
+}
+.qdClass{
+   width:28px;
+   height:16px;
+   background:url(images/qdbg.jpg) 0 0 no-repeat;
+   color:#fff;
+   position:absolute;	
+   left:40px;
+   top:65px;
+   cursor:pointer;
+   font-size:10px;
+   line-height:16px;
+   text-align:center;
+   font-family:simsun;
+   z-index:999;
+}
+
+.knobfb{
+    position:absolute;
+	width:75px;
+	height:30px;
+	vertical-align:middle;
+	font-size:26px;
+	font-family:Arial;
+	color:#87ceeb;
+	font-weight:bold;
+	top:35px;
+	left:15px;	
+	text-align:center;
+}

@@ -1,0 +1,835 @@
+﻿@charset "utf-8";
+/*Grid*/
+.ui-jqgrid {
+	FONT-SIZE: 12px;
+	POSITION: relative;
+}
+.ui-jqgrid .ui-jqgrid-view {
+	PADDING: 0em;
+	LEFT: 0px;
+	POSITION: relative;
+	TOP: 0px
+}
+/* caption*/
+.ui-jqgrid .ui-jqgrid-titlebar {
+	BORDER-RIGHT: 0px;
+	PADDING:.3em .2em .2em .3em;
+	BORDER-TOP: 0px;
+	BORDER-LEFT: 0px;
+	POSITION: relative
+}
+.ui-jqgrid .ui-jqgrid-title {
+	FLOAT: left;
+	MARGIN: 0.1em 0px 0.2em
+}
+.ui-jqgrid .ui-jqgrid-titlebar-close {
+	PADDING: 1px;
+	MARGIN: -10px 0px 0px;
+	WIDTH: 19px;
+	POSITION: absolute;
+	TOP: 50%;
+	HEIGHT: 18px
+}
+.ui-jqgrid .ui-jqgrid-titlebar-close SPAN {
+	DISPLAY: block;
+	MARGIN: 1px
+}
+.ui-jqgrid .ui-jqgrid-titlebar-close:hover {
+	PADDING: 0px;
+}
+.ui-jqgrid .ui-jqgrid-hdiv {
+	PADDING: 0em;
+	MARGIN: 0em;
+	POSITION: relative
+}
+.ui-jqgrid .ui-jqgrid-hbox {
+	PADDING-RIGHT: 0px;
+	FLOAT: left;
+}
+.ui-jqgrid .ui-jqgrid-htable {
+	TABLE-LAYOUT: fixed;
+	height:37px;
+	line-height:37px;
+	MARGIN: 0em;
+	margin-left:1px;
+	background:#f8f8f8;
+	border-collapse: collapse;
+}
+.ui-jqgrid .ui-jqgrid-htable TH {
+	padding: 0px 2px 0px 2px;
+	font-family:simsun;
+	font-weight:bold;
+	font-size:1.0em;
+	color:#000000;
+	
+}
+.ui-jqgrid .ui-jqgrid-htable TH DIV {
+	overflow: hidden;
+	position:relative;
+	height:37px;
+	line-height:37px;
+}
+/* 多余，与下面的重复
+.ui-th-column {
+	BORDER-TOP: 0px;
+	OVERFLOW: hidden;
+	BORDER-BOTTOM: 0px;
+	WHITE-SPACE: nowrap;
+	TEXT-ALIGN: center;
+	
+}
+*/
+.ui-jqgrid .ui-jqgrid-htable TH.ui-th-column {
+	
+	
+	OVERFLOW: hidden;
+	TEXT-ALIGN: center;
+	WHITE-SPACE: nowrap;
+	border: 1px solid #c2c2c2;
+}
+
+.ui-th-ltr {
+	border-bottom: 1px solid #c2c2c2;
+	border-right: 1px solid #c2c2c2;
+	border-left: 1px solid #c2c2c2;
+}/*
+.ui-jqgrid .ui-jqgrid-htable TH.ui-th-ltr {
+	border-top: 1px solid #b8cae2;
+}
+
+.ui-th-rtl {
+	BORDER-RIGHT: 0px
+}
+.ui-jqgrid .ui-jqgrid-htable TH.ui-th-rtl {
+	BORDER-RIGHT: 0px;
+}*/
+
+.ui-jqgrid .ui-th-div-ie {
+	ZOOM: 1;
+	height:26px;
+	line-height:26px;
+}
+.ui-jqgrid .ui-th-div-ie input{
+	vertical-align: middle;
+	margin-top:3px;
+	_margin-top:2px;
+}
+.ui-jqgrid .ui-jqgrid-resize {
+	DISPLAY: inline;
+	OVERFLOW: hidden;
+	CURSOR: e-resize;
+	POSITION: relative;
+	HEIGHT: 34px;
+	width:3px;
+	left:1px;
+	top:2px;
+}
+.ui-jqgrid .ui-grid-ico-sort {
+	DISPLAY: inline;
+	OVERFLOW: hidden;
+	CURSOR: pointer! important;
+	POSITION: absolute
+}
+.ui-jqgrid .ui-icon-asc {
+	margin-top:2px;
+	_MARGIN-TOP: -5px;
+	HEIGHT: 12px
+}
+.ui-jqgrid .ui-icon-desc {
+	margin-top:8px;
+	_MARGIN-TOP: 0px;
+	HEIGHT: 12px
+}
+.ui-jqgrid .ui-i-asc {
+	MARGIN-TOP: 0px;
+	HEIGHT: 16px
+}
+.ui-jqgrid .ui-i-desc {
+	MARGIN-TOP: 0px;
+	MARGIN-LEFT: 13px;
+	HEIGHT: 16px
+}
+.ui-jqgrid .ui-jqgrid-sortable {
+	CURSOR: pointer
+}
+.ui-jqgrid TR.ui-search-toolbar TH {
+	BORDER-TOP: 1px ridge
+}
+TR.ui-search-toolbar INPUT {
+	MARGIN: 1px 0px 0px
+}
+TR.ui-search-toolbar SELECT {
+	MARGIN: 1px 0px 0px
+}
+/*body*/
+.ui-jqgrid .ui-jqgrid-bdiv {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 1px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0em;
+	/*OVERFLOW: auto;*/
+	PADDING-TOP: 0px;
+	POSITION: relative;
+	TEXT-ALIGN: left;
+}
+.ui-jqgrid .ui-jqgrid-btable {
+	TABLE-LAYOUT: fixed;
+	MARGIN: 0em;
+	outline-style: none;
+	border-collapse: collapse;
+	border-left:#c2c2c2 1px solid;
+	/*border-bottom:#b8cae2 1px solid;*/
+}
+.ui-jqgrid TR.jqgrow {
+	outline-style: none;
+}
+.ui-jqgrid TR.jqgroup {
+	outline-style: none
+}
+.ui-jqgrid TR.jqgrow TD {
+	PADDING-RIGHT: 4px;
+	PADDING-LEFT: 4px;
+	_PADDING-RIGHT: 2px;
+	_PADDING-LEFT: 2px;
+	FONT-WEIGHT: normal;
+	PADDING-BOTTOM: 0px;
+	OVERFLOW: hidden;
+	PADDING-TOP: 0px;
+	BORDER-BOTTOM: 1px solid;
+	WHITE-SPACE: pre;
+	HEIGHT: 32px;
+}
+.ui-jqgrid TR.jqgrow TD a,.ui-jqgrid TR.jqgrow TD a:link{
+	color:#ff0100;
+	text-decoration:none;
+	margin:0 1px;
+	}
+.ui-jqgrid TR.jqgrow TD a:hover{
+	color:#ff0100;
+	text-decoration:underline;
+	}
+.ui-jqgrid TR.jqgrow TD a:visited{
+	color:#ff0100;
+	text-decoration:none;
+	}
+.ui-jqgrid TR.jqgfirstrow TD {
+	BORDER-RIGHT: 0px solid;
+	PADDING-RIGHT: 3px;
+	PADDING-LEFT: 2px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+.ui-jqgrid TR.jqgroup TD {
+	PADDING-RIGHT: 2px;
+	PADDING-LEFT: 2px;
+	FONT-WEIGHT: normal;
+	PADDING-BOTTOM: 0px;
+	OVERFLOW: hidden;
+	PADDING-TOP: 0px;
+	BORDER-BOTTOM: 1px solid;
+	WHITE-SPACE: pre;
+	HEIGHT: 30px
+}
+.ui-jqgrid TR.jqfoot TD {
+	PADDING-RIGHT: 2px;
+	PADDING-LEFT: 2px;
+	FONT-WEIGHT: bold;
+	PADDING-BOTTOM: 0px;
+	OVERFLOW: hidden;
+	PADDING-TOP: 0px;
+	BORDER-BOTTOM: 1px solid;
+	WHITE-SPACE: pre;
+	HEIGHT: 26px
+}
+.ui-jqgrid TR.ui-row-ltr TD {
+	TEXT-ALIGN: left;
+	border:#c2c2c2 1px solid;
+	border-top:none;
+	border-left:none;
+	
+}
+.ui-jqgrid TR.ui-row-rtl TD {
+	TEXT-ALIGN: right
+}
+.ui-jqgrid TD.jqgrid-rownum {
+	BORDER-RIGHT: 0px;
+	PADDING-RIGHT: 2px;
+	BORDER-TOP: 0px;
+	PADDING-LEFT: 2px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	BORDER-LEFT: 0px;
+	PADDING-TOP: 0px;
+	BORDER-BOTTOM: 0px
+}
+.ui-jqgrid .ui-jqgrid-resize-mark {
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	DISPLAY: none;
+	Z-INDEX: 99999;
+	LEFT: 0px;
+	OVERFLOW: hidden;
+	BORDER-LEFT: 0px;
+	WIDTH: 2px;
+	CURSOR: col-resize;
+	BORDER-BOTTOM: 0px;
+	POSITION: absolute;
+	TOP: 0px;
+	HEIGHT: 100px;
+	BACKGROUND-COLOR: #777
+}
+.ui-jqgrid .ui-jqgrid-sdiv {
+	BORDER-RIGHT: 0px;
+	PADDING-RIGHT: 0em;
+	BORDER-TOP: 0px;
+	PADDING-LEFT: 0em;
+	PADDING-BOTTOM: 0em;
+	MARGIN: 0em;
+	OVERFLOW: hidden;
+	BORDER-LEFT: 0px;
+	PADDING-TOP: 0em;
+	POSITION: relative
+}
+.ui-jqgrid .ui-jqgrid-ftable {
+	TABLE-LAYOUT: fixed;
+	MARGIN-BOTTOM: 0em
+}
+.ui-jqgrid TR.footrow TD {
+	PADDING-RIGHT: 2px;
+	BORDER-TOP: 1px solid;
+	PADDING-LEFT: 2px;
+	FONT-WEIGHT: bold;
+	PADDING-BOTTOM: 0px;
+	OVERFLOW: hidden;
+	PADDING-TOP: 0px;
+	WHITE-SPACE: nowrap;
+	HEIGHT: 21px
+}
+.ui-jqgrid TR.footrow-ltr TD {
+	BORDER-RIGHT: 1px solid;
+	TEXT-ALIGN: left
+}
+.ui-jqgrid TR.footrow-rtl TD {
+	BORDER-LEFT: 1px solid;
+	TEXT-ALIGN: right
+}
+.ui-jqgrid .ui-jqgrid-pager {
+	BORDER-RIGHT: 0px;
+	PADDING-RIGHT: 0px! important;
+	PADDING-LEFT: 0px! important;
+	PADDING-BOTTOM: 0px! important;
+	MARGIN: 0px;
+	OVERFLOW: hidden;
+	BORDER-LEFT: 0px;
+	BORDER-BOTTOM: 0px;
+	WHITE-SPACE: nowrap;
+	POSITION: relative;
+	left:-2px;
+	HEIGHT: 36px;
+	
+	
+}
+.ui-jqgrid .ui-pager-control {
+	POSITION: relative;
+	padding-top:6px;
+	padding-bottom:2px;
+	background:#ffffff;
+	/*z-index:1;*//*影响弹出型树型菜单*/
+}
+.ui-jqgrid .ui-pg-table {
+	PADDING-BOTTOM: 2px;
+	MARGIN: 0em;
+	WIDTH: auto;
+	POSITION: relative
+}
+.ui-jqgrid .ui-pg-table TD {
+	PADDING-RIGHT: 1px;
+	PADDING-LEFT: 1px;
+	FONT-WEIGHT: normal;
+	PADDING-BOTTOM: 1px;
+	VERTICAL-ALIGN: middle;
+	PADDING-TOP: 1px
+}
+.ui-jqgrid .ui-pg-button {
+	HEIGHT: 19px! important
+}
+.ui-jqgrid .ui-pg-button SPAN {
+	DISPLAY: block;
+	FLOAT: left;
+	MARGIN: 1px;
+}
+.ui-jqgrid .ui-pg-button:hover {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px
+}
+.ui-jqgrid .ui-state-disabled:hover {
+	PADDING-RIGHT: 1px;
+	PADDING-LEFT: 1px;
+	PADDING-BOTTOM: 1px;
+	PADDING-TOP: 1px
+}
+.ui-jqgrid .ui-pg-input {
+	FONT-SIZE: 1em;
+	MARGIN: 0em;
+	padding:0em;
+	height:15px;
+	line-height:15px;
+	_height: 17px;
+	_line-height: 17px;
+	border:#abadb3 1px solid;	
+	width:25px;
+	text-align:center;
+}
+.ui-jqgrid .ui-pg-selbox {
+	DISPLAY: block;
+	FONT-SIZE: 1em;
+	MARGIN: 0px;
+	padding:0px;
+	_height:15px;
+	border:#abadb3 1px solid;
+	margin-top:1px;
+	width:40px;
+}
+.ui-jqgrid .ui-separator {
+	BORDER-RIGHT: #ccc 0px solid;
+	FLOAT: right;
+	MARGIN: 1px 4px;
+	BORDER-LEFT: #ccc 0px solid;
+	HEIGHT: 18px
+}
+.ui-jqgrid .ui-paging-info {
+	MARGIN-TOP: 3px;
+	FONT-WEIGHT: normal;
+	MARGIN-RIGHT: 4px;
+	HEIGHT: 19px;	
+	color:#ff0000;
+}
+.ui-jqgrid .ui-jqgrid-pager .ui-pg-div {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FLOAT: left;
+	PADDING-BOTTOM: 1px;
+	PADDING-TOP: 1px;
+	POSITION: relative
+}
+.ui-jqgrid .ui-jqgrid-pager .ui-pg-button {
+	CURSOR: pointer
+}
+.ui-jqgrid .ui-jqgrid-pager .ui-pg-div SPAN.ui-icon {
+	FLOAT: left;
+	MARGIN: 0px 2px
+}
+.ui-jqgrid TD INPUT {
+	MARGIN: 0em
+}
+.ui-jqgrid TD SELECT .ui-jqgrid TD TEXTAREA {
+	MARGIN: 0em
+}
+.ui-jqgrid TD TEXTAREA {
+	WIDTH: auto;
+	HEIGHT: auto
+}
+.ui-jqgrid .ui-jqgrid-toppager {
+	BORDER-RIGHT: 0px;
+	PADDING-RIGHT: 0px! important;
+	BORDER-TOP: 0px;
+	PADDING-LEFT: 0px! important;
+	PADDING-BOTTOM: 0px! important;
+	MARGIN: 0px;
+	OVERFLOW: hidden;
+	BORDER-LEFT: 0px;
+	PADDING-TOP: 0px! important;
+	WHITE-SPACE: nowrap;
+	POSITION: relative;
+	HEIGHT: 25px! important
+}
+.ui-jqgrid .ui-jqgrid-toppager .ui-pg-div {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FLOAT: left;
+	PADDING-BOTTOM: 1px;
+	PADDING-TOP: 1px;
+	POSITION: relative
+}
+.ui-jqgrid .ui-jqgrid-toppager .ui-pg-button {
+	CURSOR: pointer
+}
+.ui-jqgrid .ui-jqgrid-toppager .ui-pg-div SPAN.ui-icon {
+	FLOAT: left;
+	MARGIN: 0px 2px
+}
+.ui-jqgrid .ui-jqgrid-btable .ui-sgcollapsed SPAN {
+	DISPLAY: block
+}
+.ui-jqgrid .ui-subgrid {
+	PADDING-RIGHT: 0em;
+	PADDING-LEFT: 0em;
+	PADDING-BOTTOM: 0em;
+	MARGIN: 0em;
+	WIDTH: 100%;
+	PADDING-TOP: 0em
+}
+.ui-jqgrid .ui-subgrid TABLE {
+	TABLE-LAYOUT: fixed
+}
+.ui-jqgrid .ui-subgrid TR.ui-subtblcell TD {
+	BORDER-RIGHT: 1px solid;
+	BORDER-BOTTOM: 1px solid;
+	HEIGHT: 18px
+}
+.ui-jqgrid .ui-subgrid TD.subgrid-data {
+	BORDER-TOP: 0px
+}
+.ui-jqgrid .ui-subgrid TD.subgrid-cell {
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 1px;
+	BORDER-RIGHT-WIDTH: 0px
+}
+.ui-jqgrid .ui-th-subgrid {
+	HEIGHT: 20px
+}
+.ui-jqgrid .loading {
+	BORDER-TOP-WIDTH: 2px! important;
+	PADDING-RIGHT: 6px;
+	DISPLAY: none;
+	PADDING-LEFT: 6px;
+	FONT-WEIGHT: bold;
+	BORDER-LEFT-WIDTH: 2px! important;
+	Z-INDEX: 101;
+	LEFT: 45%;
+	BORDER-BOTTOM-WIDTH: 2px! important;
+	PADDING-BOTTOM: 6px;
+	MARGIN: 5px;
+	WIDTH: auto;
+	PADDING-TOP: 6px;
+	POSITION: absolute;
+	TOP: 45%;
+	TEXT-ALIGN: center;
+	BORDER-RIGHT-WIDTH: 2px! important
+}
+.ui-jqgrid .jqgrid-overlay {
+	DISPLAY: none;
+	Z-INDEX: 100
+}
+HTML .jqgrid-overlay {
+}
+.jqgrid-overlay IFRAME {
+	Z-INDEX: -1;
+	LEFT: 0px;
+	WIDTH: expression(this.parentNode.offsetWidth+'px');
+	POSITION: absolute;
+	TOP: 0px;
+	HEIGHT: expression(this.parentNode.offsetHeight+'px')
+}
+.ui-jqgrid .ui-userdata {
+	BORDER-RIGHT: 0px;
+	OVERFLOW: hidden;
+	BORDER-LEFT: 0px;
+	HEIGHT: 21px
+}
+.ui-jqdialog {
+	PADDING-RIGHT: 0.2em;
+	DISPLAY: none;
+	PADDING-LEFT: 0.2em;
+	FONT-SIZE: 11px;
+	PADDING-BOTTOM: 0.2em;
+	OVERFLOW: visible;
+	WIDTH: 300px;
+	PADDING-TOP: 0.2em;
+	POSITION: absolute
+}
+.ui-jqdialog .ui-jqdialog-titlebar {
+	PADDING-RIGHT: 0.2em;
+	PADDING-LEFT: 0.2em;
+	PADDING-BOTTOM: 0.3em;
+	PADDING-TOP: 0.3em;
+	POSITION: relative
+}
+.ui-jqdialog .ui-jqdialog-title {
+	MARGIN: 0.1em 0px 0.2em
+}
+.ui-jqdialog .ui-jqdialog-titlebar-close {
+	PADDING-RIGHT: 1px;
+	PADDING-LEFT: 1px;
+	PADDING-BOTTOM: 1px;
+	MARGIN: -10px 0px 0px;
+	WIDTH: 19px;
+	PADDING-TOP: 1px;
+	POSITION: absolute;
+	TOP: 50%;
+	HEIGHT: 18px
+}
+.ui-jqdialog .ui-jqdialog-titlebar-close SPAN {
+	DISPLAY: block;
+	MARGIN: 1px
+}
+.ui-jqdialog .ui-jqdialog-titlebar-close:hover {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px
+}
+.ui-jqdialog .ui-jqdialog-titlebar-close:unknown {
+ PADDING-RIGHT: 0px;
+PADDING-LEFT: 0px;
+PADDING-BOTTOM: 0px;
+PADDING-TOP: 0px
+}
+.ui-jqdialog-content {
+	BORDER-TOP-WIDTH: 0px;
+	PADDING-RIGHT: 0.2em;
+	PADDING-LEFT: 0.2em;
+	BORDER-LEFT-WIDTH: 0px;
+	BACKGROUND: none transparent scroll repeat 0% 0%;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-BOTTOM: 0.3em;
+	PADDING-TOP: 0.3em;
+	HEIGHT: auto;
+	BORDER-RIGHT-WIDTH: 0px
+}
+.ui-jqdialog .ui-jqdialog-content {
+	BORDER-TOP-WIDTH: 0px;
+	PADDING-RIGHT: 0.2em;
+	PADDING-LEFT: 0.2em;
+	BORDER-LEFT-WIDTH: 0px;
+	BACKGROUND: none transparent scroll repeat 0% 0%;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-BOTTOM: 0.3em;
+	PADDING-TOP: 0.3em;
+	HEIGHT: auto;
+	BORDER-RIGHT-WIDTH: 0px
+}
+.ui-jqdialog .ui-jqconfirm {
+	BORDER-TOP-WIDTH: 3px;
+	PADDING-RIGHT: 1em;
+	DISPLAY: none;
+	PADDING-LEFT: 1em;
+	BORDER-LEFT-WIDTH: 3px;
+	RIGHT: 10px;
+	BORDER-BOTTOM-WIDTH: 3px;
+	PADDING-BOTTOM: 0.4em;
+	OVERFLOW: visible;
+	WIDTH: 220px;
+	BOTTOM: 10px;
+	PADDING-TOP: 0.4em;
+	POSITION: absolute;
+	HEIGHT: 80px;
+	TEXT-ALIGN: center;
+	BORDER-RIGHT-WIDTH: 3px
+}
+.ui-jqdialog-content .FormGrid {
+	MARGIN: 0px
+}
+.ui-jqdialog-content .EditTable {
+	MARGIN-BOTTOM: 0em;
+	WIDTH: 100%
+}
+.ui-jqdialog-content .DelTable {
+	MARGIN-BOTTOM: 0em;
+	WIDTH: 100%
+}
+.EditTable TD INPUT {
+	MARGIN: 0em
+}
+.EditTable TD SELECT {
+	MARGIN: 0em
+}
+.EditTable TD TEXTAREA {
+	MARGIN: 0em
+}
+.EditTable TD TEXTAREA {
+	WIDTH: auto;
+	HEIGHT: auto
+}
+.ui-jqdialog-content TD.EditButton {
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	PADDING-BOTTOM: 5px;
+	BORDER-LEFT: 0px;
+	PADDING-TOP: 5px;
+	TEXT-ALIGN: right
+}
+.ui-jqdialog-content TD.navButton {
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	PADDING-BOTTOM: 5px;
+	BORDER-LEFT: 0px;
+	PADDING-TOP: 5px;
+	TEXT-ALIGN: center
+}
+.ui-jqdialog-content INPUT.FormElement {
+	PADDING-RIGHT: 0.3em;
+	PADDING-LEFT: 0.3em;
+	PADDING-BOTTOM: 0.3em;
+	PADDING-TOP: 0.3em
+}
+.ui-jqdialog-content .data-line {
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	BORDER-LEFT: 0px;
+	PADDING-TOP: 0.1em;
+	BORDER-BOTTOM: 0px
+}
+.ui-jqdialog-content .CaptionTD {
+	BORDER-RIGHT: 0px;
+	PADDING-RIGHT: 2px;
+	BORDER-TOP: 0px;
+	PADDING-LEFT: 2px;
+	PADDING-BOTTOM: 2px;
+	VERTICAL-ALIGN: middle;
+	BORDER-LEFT: 0px;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: 0px;
+	WHITE-SPACE: nowrap;
+	TEXT-ALIGN: left
+}
+.ui-jqdialog-content .DataTD {
+	BORDER-RIGHT: 0px;
+	PADDING-RIGHT: 2px;
+	BORDER-TOP: 0px;
+	PADDING-LEFT: 2px;
+	PADDING-BOTTOM: 2px;
+	VERTICAL-ALIGN: top;
+	BORDER-LEFT: 0px;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: 0px
+}
+.ui-jqdialog-content .form-view-data {
+	WHITE-SPACE: pre
+}
+.fm-button {
+	PADDING-RIGHT: 0.5em;
+	DISPLAY: inline-block;
+	PADDING-LEFT: 0.5em;
+	PADDING-BOTTOM: 0.4em;
+	MARGIN: 0px 4px 0px 0px;
+	CURSOR: pointer;
+	PADDING-TOP: 0.4em;
+	ZOOM: 1;
+	POSITION: relative;
+	TEXT-ALIGN: center;
+	TEXT-DECORATION: none! important
+}
+.fm-button-icon-left {
+	PADDING-LEFT: 1.9em
+}
+.fm-button-icon-right {
+	PADDING-RIGHT: 1.9em
+}
+.fm-button-icon-left .ui-icon {
+	MARGIN-TOP: -8px;
+	RIGHT: auto;
+	LEFT: 0.2em;
+	MARGIN-LEFT: 0px;
+	POSITION: absolute;
+	TOP: 50%
+}
+.fm-button-icon-right .ui-icon {
+	MARGIN-TOP: -8px;
+	RIGHT: 0.2em;
+	LEFT: auto;
+	MARGIN-LEFT: 0px;
+	POSITION: absolute;
+	TOP: 50%
+}
+#nData {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FLOAT: left;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 3px;
+	WIDTH: 15px;
+	PADDING-TOP: 0px
+}
+#pData {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FLOAT: left;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 3px;
+	WIDTH: 15px;
+	PADDING-TOP: 0px
+}
+.ui-jqgrid .selected-row {
+	BORDER-LEFT: 0px;
+	FONT-STYLE: normal
+}
+DIV.ui-jqgrid .selected-row TD {
+	BORDER-LEFT: 0px;
+	FONT-STYLE: normal
+}
+.ui-jqgrid .tree-wrap {
+	FLOAT: left;
+	OVERFLOW: hidden;
+	WHITE-SPACE: nowrap;
+	POSITION: relative;
+	HEIGHT: 18px
+}
+.ui-jqgrid .tree-minus {
+	OVERFLOW: hidden;
+	WIDTH: 18px;
+	POSITION: absolute;
+	HEIGHT: 18px;
+	margin-top:4px;
+}
+.ui-jqgrid .tree-plus {
+	OVERFLOW: hidden;
+	WIDTH: 18px;
+	POSITION: absolute;
+	HEIGHT: 18px;
+	margin-top:4px;
+}
+.ui-jqgrid .tree-leaf {
+	OVERFLOW: hidden;
+	WIDTH: 18px;
+	POSITION: absolute;
+	HEIGHT: 18px;
+	margin-top:4px;
+}
+.ui-jqgrid .treeclick {
+	CURSOR: pointer
+}
+IFRAME.jqm {
+	Z-INDEX: -1;
+	LEFT: 0px;
+	WIDTH: expression(this.parentNode.offsetWidth+'px');
+	POSITION: absolute;
+	TOP: 0px;
+	HEIGHT: expression(this.parentNode.offsetHeight+'px')
+}
+.ui-jqgrid-dnd TR TD {
+	BORDER-RIGHT: 1px solid;
+	HEIGHT: 20px
+}
+.ui-jqgrid .ui-jqgrid-title-rtl {
+	FLOAT: right;
+	MARGIN: 0.1em 0px 0.2em
+}
+.ui-jqgrid .ui-jqgrid-hbox-rtl {
+	PADDING-LEFT: 20px;
+	FLOAT: right
+}
+.ui-jqgrid .ui-jqgrid-resize-ltr {
+	FLOAT: right;
+	MARGIN: -2px -2px -2px 0px
+}
+.ui-jqgrid .ui-jqgrid-resize-rtl {
+	FLOAT: left;
+	MARGIN: -2px 0px -1px -3px
+}
+.ui-jqgrid .ui-sort-rtl {
+	LEFT: 0px
+}
+.ui-jqgrid .tree-wrap-ltr {
+	FLOAT: left
+}
+.ui-jqgrid .tree-wrap-rtl {
+	FLOAT: right
+}
+.ui-jqgrid .ui-ellipsis {
+	TEXT-OVERFLOW: ellipsis;
+	moz-binding: url('ellipsis-xbl.xml#ellipsis')
+}

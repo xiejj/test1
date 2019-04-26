@@ -1,0 +1,78 @@
+<html>
+
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script type="text/javascript">
+
+	
+
+
+</script >
+
+<body>
+	<table class="accounttable" border="0" cellSpacing="0" cellPadding="0" pa_ui_name="table" 
+			pa_ui_hover="true" pa_ui_tree="true" pa_ui_tree_column="0" pa_ui_tree_expand="1.1">
+	<thead>
+		<tr>
+			<td>姓名</td>
+			<td>日期</td>
+			<td>金额</td>
+			<td>说明</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr id="root">
+			<td>张1</td>
+			<td>2009-01-02</td>
+			<td>12.35</td>
+			<td>A股</td>
+		</tr>
+		<tr id="c1" pa_ui_parent="root">
+			<td>张2</td>
+			<td>2009-02-02</td>
+			<td>122.35</td>
+			<td>B股</td>
+		</tr>
+		<tr id="c2" pa_ui_parent="c1">
+			<td>张3</td>
+			<td>2009-03-02</td>
+			<td>132.35</td>
+			<td>A股</td>
+		</tr>
+		<tr id="c3">
+			<td>张4</td>
+			<td>2009-04-02</td>
+			<td>142.35</td>
+			<td>港股</td>
+		</tr>
+		<tr id="c4" pa_ui_parent="c2">
+			<td>张5</td>
+			<td>2009-05-02</td>
+			<td>152.35</td>
+			<td>保险</td>
+		</tr>
+		<tr id="c5" pa_ui_parent="c1">
+			<td>张6</td>
+			<td>2009-06-02</td>
+			<td>162.35</td>
+			<td>基金</td>
+		</tr>
+		<tr id="c6" pa_ui_parent="root">
+			<td>贷款</td>
+			<td>162.35</td>
+			<td>基金</td>
+		</tr>
+		<tr id="c7" pa_ui_parent="c6">
+			<td>商业贷款</td>
+			<td>162.35</td>
+			<td>基金</td>
+		</tr>
+		<tr id="c8" pa_ui_parent="c6">
+			<td>公积金</td>
+			<td>162.35</td>
+			<td>基金</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

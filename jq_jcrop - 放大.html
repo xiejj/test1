@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+	<link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
+  
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="js/jquery.Jcrop.min.js"></script>
+<script type="text/javascript">
+
+jQuery(function($){
+ 
+  var jcrop_api,boundx,boundy,
+  $preview = $('#preview-pane'),
+  $pcnt = $('#preview-pane .preview-container'),
+  $pimg = $('#preview-pane .preview-container img'),
+  xsize = $pcnt.width(),
+  ysize = $pcnt.height();
+  
+  $('#target').Jcrop({
+    onChange: updatePreview,
+    onSelect: updatePreview
+    //aspectRatio: xsize / ysize
+  },function(){
+   
+    var bounds = this.getBounds();
+    boundx = bounds[0];
+    boundy = bounds[1];
+    jcrop_api = this;
+    $preview.appendTo(jcrop_api.ui.holder);
+  });
+  
+  function updatePreview(c){
+    if (parseInt(c.w) > 0) {
+      var rx = xsize / c.w;
+      var ry = ysize / c.h;
+      
+      $pimg.css({
+        width: Math.round(rx * boundx) + 'px',
+        height: Math.round(ry * boundy) + 'px',
+        marginLeft: '-' + Math.round(rx * c.x) + 'px',
+        marginTop: '-' + Math.round(ry * c.y) + 'px'
+      });
+    }
+  };
+});
+
+
+</script>
+
+
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+<div class="span12">
+<div class="jc-demo-box">
+
+
+<div id = "mydiv">
+  <!-- This is the image we're attaching Jcrop to -->
+  <img src="themes/images/error.gif" id="target" alt="xiejj" />
+  
+   <div id="preview-pane">
+        <div class="preview-container" style="width:200px;height:150px;overflow:hidden;position:relative;top:150px;">
+			<img src="themes/images/error.gif" class="jcrop-preview" alt="Preview">
+        </div>
+    </div>
+  
+</div>
+  <!-- This is the form that our event handler fills -->
+  <form id="coords"
+    class="coords"
+    onsubmit="return false;"
+    action="http://example.com/post.php">
+
+    <div class="inline-labels">
+    <label>X1 <input type="text" size="4" id="x1" name="x1" /></label>
+    <label>Y1 <input type="text" size="4" id="y1" name="y1" /></label>
+    <label>X2 <input type="text" size="4" id="x2" name="x2" /></label>
+    <label>Y2 <input type="text" size="4" id="y2" name="y2" /></label>
+    <label>W <input type="text" size="4" id="w" name="w" /></label>
+    <label>H <input type="text" size="4" id="h" name="h" /></label>
+    </div>
+  </form>
+
+  <div class="description">
+  <p>
+    <b>An example with a basic event handler.</b> Here we've tied
+    several form values together with a simple event handler invocation.
+    The result is that the form values are updated in real-time as
+    the selection is changed using Jcrop's <em>onChange</em> handler.
+  </p>
+
+  <p>
+    That's how easily Jcrop can be integrated into a traditional web form!
+  </p>
+  </div>
+
+
+<div class="tapmodo-footer">
+  <a href="http://tapmodo.com" class="tapmodo-logo segment">tapmodo.com</a>
+  <div class="segment"><b>&copy; 2008-2014 Tapmodo Interactive LLC</b><br />
+    Jcrop is free software released under <a href="../MIT-LICENSE.txt">MIT License</a>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+

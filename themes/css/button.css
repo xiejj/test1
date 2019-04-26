@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+.btn_search{
+	vertical-align:middle;
+	background:#ebaf69;
+	border:#d38c3c 1px solid;
+	color:#ffffff;
+	font-size:14px;
+	font-weight:bold;
+	height:28px;
+	line-height:28px;
+	padding:0px 12px;
+	cursor:pointer;
+	*overflow:visible;
+	*line-height:24px;
+	}
+.submit_div{
+	padding:25px 0px;
+	text-align:center;
+	}
+.btn_onrage{
+	background:url(images/btn_bg.gif) 0px 0px repeat-x;
+	height:34px;
+	line-height:34px;
+	border:#ff6600 1px solid;
+	width:109px;
+	cursor:pointer;
+	font-size:14px;
+	font-weight:bold;
+	color:#ffffff;
+	margin:0px 10px;
+	}
+.btn_gray{
+	background:url(images/btn_bg.gif) 0px -42px repeat-x;
+	height:34px;
+	line-height:34px;
+	border:#cacaca 1px solid;
+	width:109px;
+	cursor:pointer;
+	font-size:14px;
+	font-weight:bold;
+	color:#595959;
+	margin:0px 10px;
+	}
+.btn_blue{
+	background:url(images/btn_bg.gif) 0px -83px repeat-x;
+	height:34px;
+	line-height:34px;
+	border:#0f5e99 1px solid;
+	width:109px;
+	cursor:pointer;
+	font-size:14px;
+	font-weight:bold;
+	color:#ffffff;
+	margin:0px 10px;
+	}
+/*高级筛选*/
+.btn_gjsx_x{
+	color:#676767;
+	height:22px;
+	line-height:22px;
+	cursor:pointer;
+	background:#fff url(images/btn_bg.gif) right -127px no-repeat;
+	text-align:left;
+	padding:0 11px 0 7px;
+	border:1px solid #b4b4b4;
+	margin-top:10px;
+}
+.btn_gjsx_s{
+	color:#676767;
+	height:22px;
+	line-height:22px;
+	cursor:pointer;
+	background:#fff url(images/btn_bg.gif) right -148px no-repeat;
+	text-align:left;
+	padding:0 11px 0 7px;
+	border:1px solid #b4b4b4;
+	margin-top:10px;
+}
+/*表头按钮*/
+.btn_right{
+	float:right;
+	margin-bottom:8px;
+	}
+.btn_other{
+	background:#f17e01;
+	border:#cc5200 1px solid;
+	color:#ffffff;
+	text-align:center;
+	height:17px;
+	line-height:17px;
+	cursor:pointer;
+	padding:0px 2px;
+	overflow: visible;
+	}
+span.btn_other{
+	display:inline-block;
+	cursor:default;
+}

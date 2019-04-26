@@ -1,0 +1,598 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*页面当前位置*/
+h5{
+	font-size:14px;
+	text-align:center;
+	color:#000000;
+	height:40px;
+	line-height:40px;
+	margin-bottom:10px;
+	}
+h1{
+	border-bottom:#000000 2px solid;
+	height:36px;
+	line-height:36px;
+	text-indent:10px;
+	color:#000000;
+	font-size:14px;
+	}
+h1 span{
+	color:#999999;
+	margin-left:10px;
+	font-weight:normal;
+	}
+h1 font{
+	color:#184fa9;
+	margin:0px 5px;
+	font-weight:bold;
+	}
+.page_area{
+	width:100%;
+	padding:15px 0px;
+	/*text-indent:20px;*/
+	color:#787878;
+	line-height:24px;
+	font-weight:normal;
+	font-size:12px;
+	font-family:simsun;
+	}
+/*搜索开始*/
+.search_area{
+	border:#c1c1c1 1px dashed;
+	background:#f8f8f8;
+	color:#595959;
+	padding:7px 0px;
+	margin-bottom:10px;
+	}
+.search_area p{
+	text-indent:20px;
+	padding:9px 0px;
+	}
+.search_area span{
+	margin-right:10px;
+	}
+.search_area a{
+	line-height:24px;
+	padding:5px 10px;
+	margin-left:7px;
+	text-decoration:none;
+	}
+.search_area a,
+.search_area a:link,
+.search_area a:visited{
+	text-decoration:none;
+	color:#595959;
+	}
+.search_area a:hover{
+	color:#ffffff;
+	background:#0966b6;
+	}
+.search_area .click_on{
+	color:#ffffff;
+	background:#0966b6;
+	}
+.search_area .click_on font{
+	color:#ffffff;
+	}
+.search_area span{
+	margin-left:15px;
+	}
+.search_area .input_text{
+	border:#cccccc 1px solid;
+	background:#ffffff;
+	height:26px;
+	line-height:26px;
+	vertical-align:middle;
+	width:118px;
+	}
+.search_area select{
+	height:28px;
+	line-height:28px;
+	vertical-align: middle;
+}
+.search_area input{
+	margin-left:10px;
+	margin-right:10px;
+	}
+
+/*链接*/
+.search_area .link img{
+	margin-right:4px;
+}
+.search_area .link a,
+.search_area .link a:link,
+.search_area .link a:visited{
+	text-decoration:none;
+	padding:0;
+}
+.search_area .link a:hover{
+	color:#595959;
+	text-decoration:underline;
+	background-color:transparent;
+	}
+
+.opendiv_area{
+	border-left:none;
+	border-right:none;
+	font-size:12px;
+}
+.opendiv_area span font{
+	font-weight:bold;
+	color:#444444;
+}
+.opendiv_area p{
+	padding:3px 0px;
+	line-height:24px;}
+/*列表表格开始*/
+.tableList{
+	width:100%;
+	margin-bottom:15px;
+	}
+.tableList th{
+	background:#f8f8f8;
+	border:#c2c2c2 1px solid;
+	height:37px;
+	line-height:37px;
+	text-align:center;
+	color:#000000;
+	padding:0px 3px;	
+	}
+.tableList td{
+	background:#ffffff;
+	border:#c2c2c2 1px solid;
+	height:32px;
+	line-height:32px;
+	text-align:center;
+	padding:0px 3px;
+	}
+.tableList .td_left{
+	text-align:left;
+	}
+.tableList .td_right{
+	text-align:right;
+	}
+.tableList a,.tableList a:link,.tableList a:visited{
+	color:#ff0101;
+	text-decoration:underline;
+	}
+.tableList a:hover{
+	color:#ff0101;
+	text-decoration:none;
+	}
+.tableList font{
+	font-size:11px;
+	}
+/*数据表格*/
+.tableData{
+	width:100%;
+	border-bottom:#c6c6c6 1px solid;
+	}
+.tableData th{
+	background:#f5f3f4;
+	border:#c6c6c6 1px solid;
+	vertical-align:middle;
+	line-height:24px;
+	padding:7px 0px;
+	padding-right:10px;
+	font-weight:normal;
+	text-align:right;
+	}
+.tableData th font{
+	color:#ff0000;
+	}
+.tableData select{
+	height:28px;
+	width:255px;
+	}
+.tableData td{
+	background:#ffffff;
+	border:#c6c6c6 1px solid;
+	vertical-align:middle;
+	line-height:24px;
+	padding:7px 0px;
+	padding-left:10px;
+	text-align:left;
+	}
+	
+/*数据表格(左右列间距65px)*/
+.page_tableData{
+	width:100%;
+	}
+.page_tableData th{
+	background:#f5f3f4;
+	border:#c6c6c6 1px solid;
+	vertical-align:middle;
+	line-height:24px;
+	padding:7px 0px;
+	padding-right:65px;
+	font-weight:normal;
+	text-align:right;
+	}
+.page_tableData td{
+	background:#ffffff;
+	border:#c6c6c6 1px solid;
+	vertical-align:middle;
+	line-height:24px;
+	padding:7px 0px;
+	padding-left:65px;
+	text-align:left;
+	}
+	
+/*绑定船舶*/
+.bjcb_ul{
+	width:100%;
+	margin-top:6px;
+	}
+.bjcb_ul li{
+	margin:10px 15px;
+	width:214px;
+	border:#cccccc 1px solid;
+/*	height:128px;*/
+	min-height:128px;
+	_height:128px;
+	float:left;
+	color:#000000;
+	_display:inline;
+	}
+.bjcb_ul li h6{
+	background:#e4f2ff;
+	height:36px;
+	line-height:36px;
+	padding:0 7px;
+	font-weight:normal;
+	color:#000000;
+	}
+.bjcb_ul li h6 a{
+	color:#fd0000;
+	text-decoration:underline;
+	white-space:nowrap;
+	display:inline-block;
+	width:145px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	}
+.bjcb_ul li h6 .r{
+	display:inline;
+	width:auto;
+}
+.bjcb_ul li h6 a:link,.bjcb_ul li h6 a:visited,.bjcb_ul li h6 a:hover{
+	color:#fd0000;
+	text-decoration:underline;
+	}
+.cb_td th{
+	vertical-align:top;
+	padding:10px 0px 10px 5px;
+	line-height:32px;
+	text-align:right;
+	font-weight:normal;
+	white-space:nowrap;
+	}
+.cb_td td{
+	vertical-align:top;
+	padding:10px 0px;
+	line-height:29px;
+	text-align:left;
+	}
+.cb_td input{
+	width:85px;
+	height:19px;
+	line-height:19px;
+	border:#c6c6c6 1px solid;
+	margin:4px 0 2px;
+	}
+.cb_td span{
+	_display:inline-block;
+	_margin-top:7px;
+}
+.bjcb_ul .add_li{
+	border:#999999 1px dashed;
+	}
+/*船舶信息*/
+.ship_info{
+	width:345px;
+	border:#b6c3cc 1px solid;
+	line-height:36px;
+	margin-top:15px;
+	}
+.ship_info h6{
+	background:#e4f2ff;
+	height:36px;
+	line-height:36px;
+	text-indent:18px;
+	font-weight:normal;
+	color:#000000;
+	border-bottom:#e0dedf 1px solid;
+	}
+.ship_info h6 span{
+	margin-right:18px;
+	float:right;
+	}
+.ship_info p{
+	padding-left:18px;
+	}
+.ship_tab th{
+	height:48px;
+	line-height:48px;
+	font-size:14px;
+	text-align:right;
+	}
+.ship_tab td{
+	height:42px;
+	line-height:42px;
+	font-weight:bold;
+	font-size:14px;
+	}
+.ship_tab td span{
+	font-size:12px;
+	font-weight:normal;
+	}
+.ship_tab td font{
+	font-weight:bold;
+	}
+.ship_tab .tr_border{
+	border-bottom:#989898 1px dashed;
+	}
+.ship_tab .tr_bg{
+	background:#f0f0f0;
+	}
+/*统计表格*/
+.manager_List{
+	width:100%;
+	}
+.manager_List th{
+	background:#f8f8f8;
+	border-top:#c2c2c2 1px solid;
+	border-bottom:#c2c2c2 1px solid;
+	height:37px;
+	line-height:37px;
+	text-align:left;
+	text-indent:50px;
+	color:#000000;
+	padding:0px 3px;	
+	}
+.manager_List td{
+	background:#ffffff;
+	border-bottom:#e0e0e0 1px solid;
+	height:32px;
+	line-height:32px;
+	padding:0px 3px;
+	text-align:left;
+	text-indent:50px;
+	}
+.manager_List td font{
+	color:#f27a00;
+	font-size:13px;
+	font-weight:bold;
+	}
+.manager_List td span{
+	color:#f00001;
+	font-size:13px;
+	font-weight:bold;
+	}
+.manager_List .td_style1 td{
+	border-bottom:#ffd3a6 1px solid;
+	text-align:left;
+	text-indent:10px;
+	}
+.manager_List .td_style2 td{
+	background:#fff8f0;
+	}
+.manager_List .td_left{
+	text-align:left;
+	}
+.manager_List .td_right{
+	text-align:right;
+	}
+	
+/*系统设置页面样式,左分栏*/
+.tree_leftdiv{
+	width: 199px;
+	border: #c3c3c3 1px solid;
+	float:left;
+	}
+.tree_leftdiv .tree{
+	height:450px;
+	overflow-y:scroll;
+	*overflow-y:auto;
+	overflow-x:hidden;
+	}
+/* 左边树状图 - 标题 */
+.tree_leftdiv .tree_title{
+	height:28px;
+	line-height:28px;
+	color:#2e70c6;
+	font-size:12px;
+	font-weight:bold;
+	text-indent:10px;
+	background:#f2f7fd;
+	border-bottom:#c3c3c3 1px solid;
+	}
+/*列表样式*/
+.gridDiv{
+	position:relative;
+	margin-right:0px;
+	margin-left:205px;
+	*display:inline-block;
+}
+.text_input{
+	width:250px;
+	height:26px;
+	line-height:26px;
+	border:#cccccc 1px solid;
+	}
+/*没有边框,依附tree_leftdiv*/
+.tree_nobor{
+	border:none;
+}
+.affect_info{
+	height:35px;
+	line-height:35px;
+	vertical-align: middle;
+	margin-bottom:10px;	
+}
+.affect_info .input_text{
+	border:#cccccc 1px solid;
+	background:#ffffff;
+	height:22px;
+	line-height:22px;
+	vertical-align:middle;
+	width:120px;
+	}
+.affect_info input{
+	margin-left:0px;
+	margin-right:10px;
+	}
+/*tab切换*/
+.tab{
+	width:100%;
+	border-bottom:#cecece 1px solid;
+	border-top:#cecece 2px solid;
+	position:relative;
+	height:36px;
+	padding-top:10px;
+	text-indent:7px;
+	background:#f8f8f8;
+	margin-top:5px;
+	margin-bottom:10px;
+	}
+.tab ul{
+	margin-left:8px;
+	}
+.tab ul li{
+	margin-right:3px;
+	float:left;
+	width:100px;
+	height:36px;
+	line-height:36px;
+	position:relative;
+	}
+.tab a{
+	width:100%;
+	display:block;
+	height:37px;
+	line-height:37px;
+	color:#b3b3b3;
+	text-align:center;
+	text-decoration:none;
+	background:url(images/default_bg.gif) 0px -351px no-repeat;
+	bottom:-1px;
+	margin-right:3px;
+	text-indent:0px;
+	position:absolute;
+	}
+.tab a:link,.tab a:link:visited{
+	color:#b3b3b3;
+	text-decoration:none;
+	}
+.tab a:hover{
+	background:url(images/default_bg.gif) 0px -314px no-repeat;
+	color:#000000;
+	}
+.tab .click_on a:link,.tab .click_on a:visited{
+	background:url(images/default_bg.gif) 0px -314px no-repeat;
+	color:#000000;
+	}
+/*当班结算*/
+.money_left{
+	width:245px;
+	float:left;
+	margin-right:10px;
+	}
+.money_left h6{
+	background:url(images/money_bg.gif) repeat-x;
+	line-height:30px;
+	font-size:12px;
+	font-weight:normal;
+	padding-left:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-bottom:20px;
+	}
+.money_left h6 .font1{
+	color:#f28300;
+	font-size:14px;
+	font-weight:bold;
+	display:block;
+	line-height:34px;
+	}
+.money_left h6 .font2{
+	color:#585858;
+	font-size:20px;
+	font-weight:bold;
+	display:block;
+	line-height:34px;
+	}
+/*textarea外框*/
+.textarea_div{
+	width:968px;
+	line-height:36px;
+/*	text-indent:10px;*/
+	padding:10px;
+	vertical-align:top;
+	background:#f8f8f8;
+	border:#dedede 1px solid;
+	}
+/*加载中*/
+.loading_bg{
+	width:100%;
+	text-align:center;
+	background:#000000;
+	filter:alpha(opacity=45);
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:999;
+	}
+.loading_style{
+	width:100%;
+	height:30px;
+	text-align:center;
+	background:url(../images/loading.gif) center no-repeat;
+	position:absolute;
+	z-index:9999;
+	top:45%;
+	left:0;
+	}
+	
+/*表单标题*/
+.title_h6{
+	width:100%;
+	height:27px;
+	text-indent:0px;
+	font-weight:normal;
+	padding:0px;
+	background:url(images/title_bg.gif) 0px 0px repeat-x;
+	border-bottom:#c3d4e9 1px solid;
+	_overflow:hidden;
+}
+.title_h6 span{
+	background:#d7e9fb url(images/title_bg.gif) right -27px no-repeat;
+	_background:#d7e9fb url(images/title_bg.gif) right -28px no-repeat;
+	display:inline-block;
+	height:13px;
+	_height:15px;
+	padding-top:7px;
+	padding-bottom:7px;
+	_padding-top:7px;
+	_padding-bottom:4px;
+	padding-right:30px;
+	padding-left:12px;
+	color:#000000;
+	font-size:12px;
+	margin:0px;
+	cursor:pointer;
+	line-height:15px;
+	_line-height:13px;
+	font-weight:bold;
+	vertical-align:middle;
+	border-bottom:#c3d4e9 1px solid;
+}
+.title_h6 img{
+	cursor:pointer;
+	margin-left:7px;
+}
+.title_h6 input{
+	float:right;
+	margin-bottom:0px;
+}

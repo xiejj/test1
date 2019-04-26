@@ -1,0 +1,186 @@
+<html  style="height: 100%">
+<meta http-equiv=Content-Type content="text/html;charset=utf-8" />
+
+
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="js/echart/echarts.js"></script>
+<script type="text/javascript" src="js/echart/core.js"></script>
+<script type="text/javascript" src="js/echart/walden.js"></script>
+<script type="text/javascript" src="js/echart/shine.js"></script>
+<script type="text/javascript" src="js/echart/macarons.js"></script>
+
+<script type="text/javascript">
+
+	var data = [
+				{X:"一月份", "xiejj":"500", "hehao":"500", "mengdb":"650"},
+				{X:"二月份", "xiejj":"550", "hehao":"450", "mengdb":"650"},
+				{X:"三月份", "xiejj":"300", "hehao":"800", "mengdb":"700"},
+				{X:"四月份", "xiejj":"400", "hehao":"700", "mengdb":"800"},
+				{X:"五月份", "xiejj":"500", "hehao":"200", "mengdb":"400"},
+				{X:"六月份", "xiejj":"550", "hehao":"300", "mengdb":"450"},
+				{X:"七月份", "xiejj":"660", "hehao":"500", "mengdb":"500"},
+				{X:"八月份", "xiejj":"770", "hehao":"400", "mengdb":"600"},
+				{X:"九月份", "xiejj":"200", "hehao":"660", "mengdb":"800"},
+				{X:"十月份", "xiejj":"430", "hehao":"550", "mengdb":"750"},
+				{X:"十一月份", "xiejj":"600", "hehao":"300", "mengdb":"450"},
+				{X:"十二月份", "xiejj":"500", "hehao":"500", "mengdb":"650"}
+				
+			]
+
+
+	$(document).ready(function() {
+		getEchart(data);
+	}); 
+	
+	function getEchart(data) {
+		// 图例数据
+        var legendData = [];
+        // 存放X轴数据
+        var xAxisData = [];
+        // series集合
+        var seriesData = {};
+		// 一个serie, 对应线型图表示一条线
+		var seriesXiejj = [];
+		var seriesHehao = [];
+		var seriesMengdb = [];
+		
+		legendData.push("谢进进");
+		legendData.push("贺浩"); 
+		legendData.push("孟德宝");
+		 
+		for (var i = 0; i < data.length; i++) {
+			seriesXiejj.push(data[i].xiejj);
+			seriesHehao.push(data[i].hehao);
+			seriesMengdb.push(data[i].mengdb);
+			xAxisData.push(data[i].X);
+		}
+		
+		seriesData.谢进进 = seriesXiejj;
+		seriesData.贺浩 = seriesHehao;
+		seriesData.孟德宝 = seriesMengdb;
+		
+        //echartLine(legendData, seriesData, xAxisData);
+        echartPie(legendData, seriesData);
+		
+	}
+	
+	
+	
+    function echartLine(legendData, seriesData, xAxisData) {
+        
+		// series集合
+		var series = [];
+		// 遍历图例
+        for (var i = 0; i < legendData.length; i++) {
+            var serie = {};
+            // type包括：line 线型图、bar 柱状图、pie 饼状图、scatter 点状图
+			// 示例网址： http://echarts.baidu.com/examples/
+			serie.type = 'bar';
+            serie.name = legendData[i];
+            serie.data = seriesData[legendData[i]];
+            series.push(serie)
+        }
+
+        var myChart = echarts.init(document.getElementById('echart'), "macarons");
+        // 颜色，按顺序依次使用
+		var colorPalette = ["#55b7dc", "#ffca64", "#4a8c95","#30acb8", "#77d2e6"];
+        // 标题
+		var textName = "MY ECHART DEMO";
+
+        $("#echart").echart({
+            theme: "macarons",
+            title: {
+                text : textName,
+				right : "center"
+            },
+            color: colorPalette,
+            legend: {
+                show: true,
+                data: legendData,
+                orient : 'vertical',
+                right : 'right',
+                top : 'middle'
+            },
+            xAxis: {
+                name : 'X',
+				type: 'category',
+                data: xAxisData,
+                axisTick : {
+                    alignWithLabel : true,
+                    interval : 0,
+                }
+            },
+            yAxis: {
+                name : 'Y',
+                type : 'value'
+            },
+            series: series,
+        }, myChart);
+		
+		
+		myChart.on("legendselectchanged", function(data) {
+			console.info(data);
+		});
+		
+		
+    }
+	
+	function echartPie(legendData, seriesData) {
+		 //series的值
+        var seriesPie = [];
+
+        var serie = {};
+        serie.name = '统计';
+        serie.type = 'pie';
+        serie.selectedMode = 'single';
+        serie.radius = '55%';
+        serie.center = ['50%', '40%'];
+        serie.data = [];
+        //serie.roseType = 'angle'; -- 南丁格尔图
+
+        //组成series
+        for (var i = 0; i < legendData.length; i++) {
+
+            var seriesDataPie = {};
+            seriesDataPie.value = seriesData[legendData[i]][0];
+            seriesDataPie.name = legendData[i];
+            serie.data.push(seriesDataPie);
+
+        }
+        seriesPie.push(serie)
+
+        var myChart = echarts.init(document.getElementById('echart'), "light");
+        var colorPalette = ["#28ace7", "#ff9333", "#de3644","#066186", "#77d2e6"];
+
+        $("#echart").echartPie({
+            title: {
+                text : '统计',
+                right : 'center'
+            },
+            color: colorPalette,
+            legend: {
+                orient: 'vertical',
+                right: 'right',
+                top: '20%',
+				color: 'red',
+                data: legendData
+            },
+            series: seriesPie
+        }, myChart);
+		
+		myChart.on("click", function(data) {
+			alert(data.name);
+		});
+	}
+	
+
+
+</script >
+
+<body style="height: 100%; margin: 0">
+	<div id="echart" style="height: 100%">
+	
+	</div>
+
+</body>
+</html>

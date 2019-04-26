@@ -1,0 +1,44 @@
+<html>
+<meta http-equiv=Content-Type content="text/html;charset=utf-8" />
+<script type="text/javascript" src="../js/jquery-1.7.1.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		if (localStorage.pageCount) {
+			localStorage.pageCount = Number(localStorage.pageCount) + 1;
+		} else {
+			localStorage.pageCount = 1;
+		}
+		$("#div").empty();
+		$("#div").append("第【" + localStorage.pageCount + "】访问该页面！");
+		
+		
+		if (sessionStorage.pageCount) {
+			sessionStorage.pageCount = Number(sessionStorage.pageCount) + 1;
+		} else {
+			sessionStorage.pageCount = 1;
+		}
+		$("#div1").empty();
+		$("#div1").append("第a【" + sessionStorage.pageCount + "】访问该页面！");
+		
+	});
+
+
+	function doInit() {
+		// 删除指定的对象
+		localStorage.removeItem("pageCount");
+		// 删除所有
+		localStrorage.clear();
+	}
+
+
+
+</script >
+
+<body>
+	<div id = "div"></div>
+	<div id = "div1"></div>
+	<br/>
+	<input type="button" onclick="doInit();" value="重置"></input>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+<meta http-equiv=Content-Type content="text/html;charset=utf-8" />
+
+<link rel="stylesheet" href="css/select2.css" type="text/css" />
+
+
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="js/select2.js"></script>
+<script type="text/javascript" src="js/pinyin.js"></script>
+<script type="text/javascript">
+
+
+	$(document).ready(function() {
+		$('#sjgnId').select2({
+			tags : true
+			
+		});
+		
+	}); 
+	
+	
+	function doInit() {
+		var path = "http://172.16.5.227:8090/201805/20180503/10011011/10021502012357489780_10011011_01688.jpg";
+		
+		var newpath = path.replace('.jpg','_jcrop.jpg');
+		
+		alert(newpath);
+	}
+	
+	function doInit1() {
+		alert("value:" + $('#sjgnId').val());
+		alert("text:" + $('#sjgnId').find("option:selected").text());
+	}
+	
+	function changeZhdd() {
+		var selectText = $('#sjgnId').find("option:selected").text();
+		var selectValue = $('#sjgnId').val();
+		
+		if (selectText == selectValue) {
+			$("#sjgnId").val(null).trigger("change");
+		}
+	}
+
+
+</script >
+
+<body>
+	<div>
+		<input type="search" id = "test" onblur="doInit();doInit1()"></input>
+		
+		<input type="button" onclick="doInit();" value="测试" />
+		<input type="button" onclick="doInit1();" value="测试1" />
+		
+		<iframe id = "myiframe" ></iframe>
+		
+		<select id = "sjgnId" onchange = "changeZhdd()">
+			<option value="">请选择</option>
+			<option value="1">1</option>
+			<option value="2">我</option>
+			<option value="3">你</option>
+		</select>
+
+	</div>
+
+</body>
+</html>

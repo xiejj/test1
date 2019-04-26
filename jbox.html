@@ -1,0 +1,99 @@
+<html>
+<meta http-equiv=Content-Type content="text/html;charset=utf-8" />
+
+<link rel="stylesheet" href="css/jbox.css" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="js/jquery.jBox-2.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.jBox-zh-CN.js"></script>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		
+		
+	}); 
+	
+	
+	function doInit() {
+		var cmch = "船名船号";
+		var wzkcfs = "20";
+		var sfkj = "";
+		var mjyy = "";
+		
+		var submit = function (v, h, f) {
+		    if (v == true) {
+		    	sfkj = "1";
+		    } else {
+		    	sfkj = "2";
+		    	mjyy = $("#mjyy").text();
+		    	
+		    	if (mjyy == "") {
+		    		alert("请输入免减原因！");
+					
+		    		return false;
+		    	} else {
+					eee(12);
+					return false;
+				}
+				
+				
+		    }
+		};
+		
+		var laodComfig = function (h) {
+			$("<button>").each(function() {
+				alert($(this).text());
+			});
+		};
+		var html = "<textarea id = \"mjyy\" rows=\"3\" cols=\"40\"></textarea>";
+		
+		var kc = "<input type = \"button\" style = \"background-color:red\" value='扣除'>";
+		
+		$.jBox.confirm(cmch + "因被录入违章,系统将扣减诚信得分" + wzkcfs + "分,是否确认扣减？" + html, "提示信息", submit, { buttons: {'扣除': true, '免减': false}, loaded:laodComfig, id : 'xiejj' });
+		
+		
+	}
+	
+	function doInit1() {
+		for (var i = 0; i < 4; i++) {
+			comfig1();
+		}
+	}
+	
+	
+	function comfig1() {
+		
+	var submit = function (v, h, f) {
+    if (v == 'ok')
+       alert("ok");
+    else if (v == 'cancel')
+        alert("no");
+
+    return true; //close
+};
+
+	$.jBox.confirm("确定吗？", "提示", submit);
+	}
+	
+
+</script >
+<style>
+#xiejj .jbox-button{
+	background-color:#71b5fe
+}
+#xiejj .jbox-button + .jbox-button{
+	background-color:#ffa800
+}
+</style>
+
+<body>
+	<div>
+		<input type="search" id = "test"></input>
+		
+		<input type="button" onclick="doInit1();" value="测试" />
+
+	</div>
+
+</body>
+</html>

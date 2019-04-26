@@ -1,0 +1,46 @@
+<html>
+
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script type="text/javascript">
+
+	function doInit() {
+		// 基础数据（key为一级菜单  value为二级菜单）
+		var data = {"order":["list","detai"], "production":["list","input"]};
+		// 遍历所有数据
+		for (var key in data) {
+			// 拼接一级菜单
+			var $div = $("<div id = '" + key + "_1'>").append("<span>" + key + "</span>");
+			// 拼接二级菜单，二级菜单为checkbox的形式
+			var $div1 = $("<div id = '" + key + "'>");
+			for(var i = 0; i < data[key].length; i++){ 
+				if ( i%2 == 0) {
+					// 选中checkbox
+					$div1.append("<input type='checkbox' name='hasResources.id' value='" + data[key][i] + "' checked>");
+				} else {
+					// 未选中checkbox
+					$div1.append("<input type='checkbox' name='hasResources.id' value='" + data[key][i] + "'/>");
+				}
+				
+				$div1.append("<span>" + data[key][i] + "</span>").append("</br>");
+			}
+			// 生成菜单
+			$("#treeDiv").append($div).append($div1);
+			// 为每个一级菜单注册一个点击事件，用于隐藏和显示二级菜单
+			$("#" + key + "_1").click(function(){
+				if ($("#" + this.innerText)[0].style.display == "none") {
+					$("#" + this.innerText).show();
+				} else {
+					$("#" + this.innerText).hide();
+				}
+			});
+		}
+	}
+
+
+</script >
+
+<body onload="doInit();">
+	<div id = "treeDiv"></div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+<meta http-equiv=Content-Type content="text/html;charset=utf-8" />
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script type="text/javascript">
+
+	function doInit() {
+		
+		navigator.geolocation.getCurrentPosition(function getPositionSuccess(position) {
+			var lat = position.coords.latitude;//获取过来的当前纬度
+			var lng = position.coords.longitude;//获取过来的当前经度
+			
+			var arr = []
+			arr.push(lng)
+			arr.push(lat)
+			
+			alert(position);
+			
+			$.ajax({
+				type: "GET",
+				url: "http://api.map.baidu.com/geocoder/v2/?ak=oM55dVWVwLUU7shkz7uY8M6E&callback=renderReverse&location=" + lat + "," + lng + "&output=json&pois=1",//将经纬度通过地址栏参数的形式 传给百度提供的api
+				beforeSend: function () {
+					//由于这段过程需要些时间 所以最好页面上有加载提示
+				},
+				data: {},
+				dataType: "jsonp",//由于是跨域传输 所以需要以jsonp的形式进行传输
+				jsonpCallback: "renderReverse",//类似跨域传输的标识 需要接收方和传输方做好统一
+				success: function (data) {
+					alert("respone:" + data)
+					$("#myposition").html("我在：" + data.result.addressComponent.city)
+					
+				  }
+			})}, function (error) {
+				alert("error:" + error.message);
+		}, {})
+	}
+
+	
+	var longtitude = 0;
+	var latitude = 0;
+	// 已验证，可以取到经纬度，需指定具体的位置
+	// longtitude 经度
+	// latitude 维度
+	function GetPostion() {
+		   
+				//通过百度获取经纬度
+				var address = "南京市";
+				var url = "http://api.map.baidu.com/geocoder/v2/?address=" + address + "&output=json&ak=FG7wxr1VUj0k2NwoO3yXzymd&callback=?";
+				$.getJSON(url, function (data) {
+					
+					longtitude = data.result.location.lng;
+					latitude = data.result.location.lat;
+					
+					alert("longtitude:" + longtitude + ",latitude:" + latitude);
+					
+					$.ajax({
+						type: "GET",
+						url: "http://api.map.baidu.com/geocoder/v2/?ak=oM55dVWVwLUU7shkz7uY8M6E&callback=renderReverse&location=" + latitude + "," + longtitude + "&output=json&pois=1",//将经纬度通过地址栏参数的形式 传给百度提供的api
+						beforeSend: function () {
+							//由于这段过程需要些时间 所以最好页面上有加载提示
+						},
+						data: {},
+						dataType: "jsonp",//由于是跨域传输 所以需要以jsonp的形式进行传输
+						jsonpCallback: "renderReverse",//类似跨域传输的标识 需要接收方和传输方做好统一
+						success: function (data) {
+							
+							$("#myposition").html("我在：" + data.result.addressComponent.city)
+							
+						  }
+					})
+					
+					
+				});
+				
+				
+	}
+
+</script >
+
+<body>
+	<div>
+		
+		<input type="button" onclick="doInit();" value="我的位置"></input>
+		
+		<span id = "myposition"></span>
+		
+	</div>
+
+</body>
+</html>

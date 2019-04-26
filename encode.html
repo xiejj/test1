@@ -1,0 +1,149 @@
+<html>
+<title>转码与解码</title>
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script type="text/javascript">
+
+	$().ready(function(){
+			//var id = "timeId1,timeId2";
+			//toDate(id,"yyyy-MM-dd HH:mm:ss");
+		});
+		
+		function dd() {
+			var path= '%2fshared%2f1.%20Overview%2f_portal%2f1.1%20General%20Index';
+			alert()
+			//encodeURI();
+			//encodeURIComponent()
+			//escape()
+			//decodeURI
+			//decodeURIComponent
+			//unescape
+		}
+		
+		function doCode() {
+			var text = document.getElementById("urlId").value;
+			var show0 = $("#urlId0");
+			var show1 = $("#urlId1");
+			var show2 = $("#urlId2");
+			$("#urlId3").html(text);
+			if(text == null || text == "") {
+
+			} else {
+				show0.html(escape(text));
+				show1.html(encodeURI(text));
+				show2.html(encodeURIComponent(text));
+			}
+		}
+		function unDoCode() {
+			var text = document.getElementById("unUrlId").value;
+			var show0 = $("#unUrlId0");
+			var show1 = $("#unUrlId1");
+			var show2 = $("#unUrlId2");
+			$("#unUrlId3").html(text);
+			if(text == null || text == "") {
+
+			} else {
+				show0.html(unescape(text));
+				show1.html(decodeURI(text));
+				show2.html(decodeURIComponent(text));
+			}
+		}
+	</script>
+</head>
+
+<body>
+<!-- 时间：<input type="text" id="timeId1" name="timeName1" >
+ 至：<input type="text" id="timeId2" name="timeName2" > -->
+<br> 
+<span>
+escape()不编码的字符：@*/+<br/>
+encodeURI() 不编码的字符：~!@#$&*()=:/,;?+"<br/>
+encodeURIComponent()不编码的字符： ~!*()''<br/>
+ </span>
+ <br />
+ <br />
+  转码：<input type="text" id="urlId" name="urlName"><input type="button" value="GO" onclick="doCode();">
+ <table>
+   	<tr><td colspan="2"> &nbsp;</td></tr>
+  	<tr>
+ 		<td>
+ 			转码串：
+ 			<br />
+ 		</td>
+ 		<td>
+ 			<div id="urlId3"></div>
+ 		</td>
+ 	</tr>
+ 	  	<tr><td colspan="2"> &nbsp;</td></tr>
+ 	<tr>
+ 		<td>
+ 			escape转码：
+ 		</td>
+ 		<td>
+ 			<div id="urlId0"></div>
+ 		</td>
+ 	</tr>
+ 	  	<tr><td colspan="2"> &nbsp;</td></tr>
+ 	<tr>
+ 		 <td>
+ 			encodeURI转码：
+ 		</td>
+ 		<td>
+ 			<div id="urlId1"></div>
+ 		</td>
+ 	</tr>
+ 	  	<tr><td colspan="2"> &nbsp;</td></tr>
+ 	<tr>
+ 		 <td>
+ 			encodeURIComponent转码：
+ 		</td>
+ 		<td>
+ 			<div id="urlId2"></div>
+ 		</td>
+ 	</tr>
+ </table>
+<br />
+<br/>
+  解码：<input type="text" id="unUrlId" name="unUrlName"><input type="button" value="GO" onclick="unDoCode();">
+ <table>
+ 	  	<tr><td colspan="2"> &nbsp;</td></tr>
+ 	<tr>
+ 		<td>
+ 			解码串：
+ 		</td>
+ 		<td>
+ 			<div id="unUrlId3"></div>
+ 		</td>
+  	</tr>
+  	<tr><td colspan="2"> &nbsp;</td></tr>
+ 	<tr>
+ 		<td>
+ 			unescape解码：
+ 		</td>
+ 		<td>
+ 			<div id="unUrlId0"></div>
+ 		</td>
+  	</tr>
+  	<tr><td colspan="2"> &nbsp;</td></tr>
+ 	<tr>
+ 		 <td>
+ 			decodeURI解码：
+ 		</td>
+ 		<td>
+ 			<div id="unUrlId1"></div>
+ 		</td>
+  	</tr>
+  	 <tr><td colspan="2"> &nbsp;</td></tr>
+ 	<tr>
+ 		 <td>
+ 			decodeURIComponent解码：
+ 		</td>
+ 		<td>
+ 			<div id="unUrlId2"></div>
+ 		</td>
+ 	</tr>
+ </table>
+
+ <div>
+ </div>
+</body>
+</html>

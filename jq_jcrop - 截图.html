@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+	<link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
+  
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="js/jquery.Jcrop.js"></script>
+<script type="text/javascript">
+
+var jcrop_api;
+
+  jQuery(function($){
+
+    
+
+    $('#target').Jcrop({
+		onSelect: updateCoords
+	 
+    },function(){
+      jcrop_api = this;
+    });
+	
+	
+
+ 
+
+  });
+  
+ function updateCoords(c){
+  $('#x').val(c.x);
+  $('#y').val(c.y);
+  $('#w').val(c.w);
+  $('#h').val(c.h);
+};
+  
+function checkCoords(){
+  if (parseInt($('#w').val())) {
+    return true;
+  };
+  alert('请先选择要裁剪的区域后，再提交。');
+  return false;
+};
+
+
+
+</script>
+
+
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+<div class="span12">
+<div class="jc-demo-box">
+
+
+<div id = "mydiv">
+  <!-- This is the image we're attaching Jcrop to -->
+  <img src="themes/images/error.gif" id="target" alt="xiejj" />
+</div>
+  <!-- This is the form that our event handler fills -->
+ <div class="example">
+        <!-- This is the form that our event handler fills -->
+        <form action="?" method="post" onsubmit="return checkCoords();">
+          <input type="hidden" id="x" name="x">
+          <input type="hidden" id="y" name="y">
+          <input type="hidden" id="w" name="w">
+          <input type="hidden" id="h" name="h">
+          <input class="button blue" type="submit" value="裁剪图像">
+        </form>
+      </div>
+  <div class="description">
+  <p>
+    <b>An example with a basic event handler.</b> Here we've tied
+    several form values together with a simple event handler invocation.
+    The result is that the form values are updated in real-time as
+    the selection is changed using Jcrop's <em>onChange</em> handler.
+  </p>
+
+  <p>
+    That's how easily Jcrop can be integrated into a traditional web form!
+  </p>
+  </div>
+
+
+<div class="tapmodo-footer">
+  <a href="http://tapmodo.com" class="tapmodo-logo segment">tapmodo.com</a>
+  <div class="segment"><b>&copy; 2008-2014 Tapmodo Interactive LLC</b><br />
+    Jcrop is free software released under <a href="../MIT-LICENSE.txt">MIT License</a>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+

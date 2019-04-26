@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+/*网站信息*/
+#site_info{
+	width:100%;
+	height:31px;
+	line-height:31px;
+	background:#f7f5f6;
+	border-bottom:#dcdcdc 1px solid;
+	}
+#site_info span{
+	display:block;
+	width:990px;
+	margin:0px auto;
+	text-align:right;
+	color:#666666;
+	}
+
+/*logo*/
+#top{
+	width:1100px;
+	margin:0px auto;
+	height:56px;
+	background:url(images/default_bg.gif) 0px 0px no-repeat;
+	}
+
+/*一级菜单开始*/
+#menu{
+	width:100%;
+	height:42px;
+	background:url(images/default_bg.gif) 0px -58px repeat-x;
+	}
+#menu ul{
+	margin:0px auto;
+	width:990px;
+	height:42px;
+	}
+#menu ul li{
+	color:#ffffff;
+	font-size:14px;
+	float:left;
+	height:42px;
+	line-height:42px;
+	font-weight:bold;
+	margin-right:10px;
+/*	margin-left:8px;*/
+	}
+#menu a{
+	display:block;
+	padding:0px 30px 0px 10px;
+	line-height:42px;
+	}
+#menu a,#menu a:link,#menu a:visited{
+	color:#ffffff;
+	text-decoration:none;
+	}
+#menu ul li a:hover{
+	color:#ffffff;
+	text-decoration:none;
+	}
+#menu .click_on{
+	background:url(images/default_bg.gif) left -100px no-repeat;
+	}
+#menu .click_on a{
+	color:#787878;
+	text-decoration:none;
+	background:url(images/default_bg.gif) right -149px no-repeat;
+	}
+#menu .click_on a,#menu .click_on a:link,#menu .click_on a:visited,#menu .click_on a:hover{
+	color:#787878;
+	text-decoration:none;
+	}
+/*二级菜单开始*/
+#second_menu{
+	width:100%;
+	height:38px;
+	line-height:38px;
+	background:url(images/default_bg.gif) 0px -200px repeat-x;
+	}
+#second_menu span{
+	width:1100px;
+	margin:0px auto;
+	height:38px;
+	line-height:38px;
+	display:block;
+	font-family:simsun;
+	font-size:11px;
+	text-align:left;
+	text-indent:25px;
+	}
+#second_menu span a{
+	padding:0px 15px;
+	color:#787878;
+	text-decoration:none;
+	text-align:center;
+	font-size:12px;
+	}
+#second_menu span a:link,#second_menu span a:visited{
+	color:#787878;
+	text-decoration:none;
+	}
+#second_menu span a:hover{
+	color:#787878;
+	text-decoration:underline;
+	}
+#second_menu .click_on{
+	font-weight:bold;
+	}
+/*页面内容开始*/
+#container{
+	width:1100px;
+	margin:0px auto;
+	}
+/*页脚版权*/
+.footer{
+	width:100%;
+	height:72px;
+	line-height:72px;
+	color:#a3a3a3;
+	text-align:right;
+	margin-top:20px;
+	}

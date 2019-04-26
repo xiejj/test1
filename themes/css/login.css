@@ -1,0 +1,89 @@
+html {
+	width:100%;
+	height:100%;
+	border:none;
+	padding:0px;
+	margin:0px;
+}
+body {
+	min-width:1000px;
+	min-height:600px;
+	width:100%;
+	height:100%;
+	border:0px;
+	padding:0px;
+	margin:0px;
+	font-size:12px;
+	font-family:verdana,simsun;
+	color:#999;
+	background:#4682B4 url(images/bg_login2.jpg) center no-repeat;
+	position:relative;
+}
+
+#contaniner{
+	width:1000px;
+	height:600px;
+	padding:0px;
+	margin:0px;
+	background:#4682B4 url(images/bg_login2.jpg) center no-repeat;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-300px;
+	margin-left:-500px;
+}
+
+.loginDiv {
+	width:420px;
+	position:absolute;
+	top:262px;
+	left:328px;
+}
+.loginDiv p {
+	line-height:20px;
+	color:#fff;
+	font-size:14px;
+	font-weight:bold;
+	padding:2px 0px;
+	*padding:1px 0px;
+	margin:0px 80px 2px 112px;
+	position:relative;
+}
+.loginDiv p input {
+	width:180px;
+	height:25px;
+	line-height:22px;
+	font-size:16px;
+	text-indent:10px;
+	vertical-align:middle;
+	background:none;
+	padding:0;
+	border:none;
+	outline:none;
+}
+
+.loginDiv .btn_login {
+	width:110px;
+	height:40px;
+	line-height:40px;
+	color:#fff;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+	background:url(images/bg_loginbt.jpg) no-repeat;
+	padding:0;
+	margin:15px 80px 0px 190px;
+	border:none;
+	cursor:pointer;
+}
+
+.footer{
+	width:300px;
+	height:30px;
+	line-height:30px;
+	color:#FFFFFF;
+	text-align:center;
+	margin: 550px 80px 0px 350px;
+}
+	
